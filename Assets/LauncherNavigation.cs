@@ -44,13 +44,14 @@ public class LauncherNavigation : MonoBehaviour
 
     private void Down(InputAction.CallbackContext context)
     {
-        if (SceneManager.GetActiveScene().buildIndex==0)
+        if (SceneManager.GetActiveScene().buildIndex == 0)
         {
             SceneManager.LoadScene(sceneCount-1);
         }
-        //Show the previous game in the launcher
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
-
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        }
     }
     private void Play(InputAction.CallbackContext context)
     {
