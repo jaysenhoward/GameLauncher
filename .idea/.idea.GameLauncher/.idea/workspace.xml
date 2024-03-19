@@ -3,19 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="218551ff-d13b-4c29-862a-08d17123ec14" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameLauncher/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameLauncher/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LauncherNavigation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LauncherNavigation.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneFader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneFader.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneFader.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneFader.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameTemplate.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameTemplate.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Project Rock.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Project Rock.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Slayer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Slayer.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI_Input.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI_Input.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI_Input.inputactions" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI_Input.inputactions.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710263373729</updated>
       <workItem from="1710263384422" duration="608000" />
-      <workItem from="1710877093921" duration="1129000" />
+      <workItem from="1710877093921" duration="1653000" />
     </task>
     <servers />
   </component>
