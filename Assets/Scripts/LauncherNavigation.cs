@@ -16,6 +16,8 @@ public class LauncherNavigation : MonoBehaviour
     private InputAction UpKey;
     private InputAction DownKey;
     private InputAction PlayKey;
+
+    public LevelLoader levelLoader;
     public UI_Input UIControls;
     public string path;
 
@@ -33,11 +35,13 @@ public class LauncherNavigation : MonoBehaviour
         //Show the next game in the launcher. If we are at the last game in the launcher return to Project Rock
         if (SceneManager.GetActiveScene().buildIndex == sceneCount - 1)
         {
-            SceneManager.LoadScene(0);
+            levelLoader.LoadNextLevel(0);
+            //SceneManager.LoadScene(0);
         }
         else
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            levelLoader.LoadNextLevel(SceneManager.GetActiveScene().buildIndex+1);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
     }
@@ -46,11 +50,13 @@ public class LauncherNavigation : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-            SceneManager.LoadScene(sceneCount-1);
+            levelLoader.LoadNextLevel(sceneCount-1);
+            //SceneManager.LoadScene(sceneCount-1);
         }
         else
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            levelLoader.LoadNextLevel(SceneManager.GetActiveScene().buildIndex-1);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
     }
     private void Play(InputAction.CallbackContext context)
