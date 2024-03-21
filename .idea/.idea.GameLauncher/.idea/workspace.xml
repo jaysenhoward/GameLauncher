@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="218551ff-d13b-4c29-862a-08d17123ec14" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameLauncher/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameLauncher/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameTemplate.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameTemplate.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Project Rock.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Project Rock.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Slayer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Slayer.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LauncherNavigation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LauncherNavigation.cs" afterDir="false" />
     </list>
@@ -10,9 +12,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/VideoController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -86,7 +85,8 @@
       <updated>1710263373729</updated>
       <workItem from="1710263384422" duration="608000" />
       <workItem from="1710877093921" duration="1653000" />
-      <workItem from="1710963165700" duration="952000" />
+      <workItem from="1710963165700" duration="1684000" />
+      <workItem from="1710980914246" duration="630000" />
     </task>
     <servers />
   </component>

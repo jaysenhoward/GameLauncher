@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
 
+
 public class LauncherNavigation : MonoBehaviour
 {
     private PlayerInput input;
@@ -66,7 +67,9 @@ public class LauncherNavigation : MonoBehaviour
         //Launch Game
         //Process.Start(path);
         //need file location
-        //Application.dataPath + /../.... (depending on how files are organized)
+        Process.Start(path);
+        
+        //Application.Quit();
     }
 
     private void OnEnable()

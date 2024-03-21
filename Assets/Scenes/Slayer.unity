@@ -748,7 +748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelLoader: {fileID: 1756918263}
-  path: 
+  path: '"C:\GameLauncherBuilds\Slayer\Slayer.exe"'
 --- !u!1 &829700775
 GameObject:
   m_ObjectHideFlags: 0

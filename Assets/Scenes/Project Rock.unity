@@ -692,7 +692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelLoader: {fileID: 474107600}
-  path: 
+  path: '"C:\GameLauncherBuilds\ProjectRock\BallSlideSimulator.exe"'
 --- !u!1 &829700775
 GameObject:
   m_ObjectHideFlags: 0
