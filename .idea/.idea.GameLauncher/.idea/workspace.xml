@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="218551ff-d13b-4c29-862a-08d17123ec14" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameLauncher/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameLauncher/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameTemplate.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameTemplate.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Project Rock.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Project Rock.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Slayer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Slayer.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LauncherNavigation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LauncherNavigation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +12,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="2db4IPXLTjAkroDuh0Yux0i00Vg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -39,7 +36,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -47,7 +44,7 @@
       <method v="2" />
     </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.7f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -87,12 +84,15 @@
       <workItem from="1710877093921" duration="1653000" />
       <workItem from="1710963165700" duration="1684000" />
       <workItem from="1710980914246" duration="630000" />
+      <workItem from="1711129578540" duration="14000" />
+      <workItem from="1711129608479" duration="829000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
