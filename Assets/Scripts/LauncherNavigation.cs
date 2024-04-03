@@ -36,7 +36,7 @@ public class LauncherNavigation : MonoBehaviour
     private void Up(InputAction.CallbackContext context)
     {
         //Show the next game in the launcher. If we are at the last game in the launcher return to Project Rock
-        if (SceneManager.GetActiveScene().buildIndex == sceneCount - 1)
+        if (SceneManager.GetActiveScene().buildIndex == sceneCount - 2)
         {
             levelLoader.LoadNextLevel(0);
             //SceneManager.LoadScene(0);
