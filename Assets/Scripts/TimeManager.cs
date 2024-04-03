@@ -1,43 +1,153 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System.IO;
 using System;
-using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 
 public class TimeManager : MonoBehaviour
 {
-    [SerializeField] private float[] _timesArr;
-    
-    private DateTime time;
-    // Start is called before the first frame update
+    int count;
+    string currScene;
+    int goodToGo = 0;
+    int textHour;
+    int textMin;
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        currScene = SceneManager.GetActiveScene().name;
+        count = 0;
+        DateTime thisDay = DateTime.Now;
+        DontDestroyOnLoad(this);
     }
-
-    // Update is called once per frame
     void Update()
     {
-        time = DateTime.Now;
-        for (int i = 0; i < _timesArr.Length - 1; i++)
+        DateTime thisDay = DateTime.Now;
+        string thisDayString = thisDay.DayOfWeek.ToString();
+        int currHour = thisDay.Hour;
+        int currMinute = thisDay.Minute;
+        string path = Application.streamingAssetsPath + "/schedule.txt";
+        string[] textFileArray = File.ReadAllLines(path);
+
+        for (int i = 0; i < textFileArray.Length; i++)
         {
-            if (i % 2 == 0)
+            string currentLine = textFileArray[i];
+            string[] tempLineArray = currentLine.Split('/');
+
+            if (tempLineArray[0] == thisDayString)
             {
-                if (time.Hour + time.Minute / 60.0f > _timesArr[i] && 
-                    time.Hour + time.Minute / 60.0f < _timesArr[i + 1])
+                //Debug.Log(tempLineArray[0]);
+                string[] tempTime = tempLineArray[1].Split(',');
+                for (int j = 0; j < tempTime.Length; j++)
                 {
-                    SceneManager.LoadScene("No Playing Screen");
-                }
-            }
-            else
-            {
-                if (time.Hour + time.Minute / 60.0f > _timesArr[i] && 
-                    time.Hour + time.Minute / 60.0f < _timesArr[i + 1])
-                {
-                    SceneManager.LoadScene("Project Rock");
+                    //loop through the inside of the array
+                    //this gives each time slot
+                    string[] eachTime = tempTime[j].Split('-');
+
+                    //this gives the start and end time of each slot
+                    //Debug.Log("start time " + eachTime[0] + " end time " + eachTime[1]);
+                    //grabbing the hours and minutes from the start time
+                    string[] startTimes = eachTime[0].Split(':');
+                    string firstHour = startTimes[0];
+                    string firstMinute = startTimes[1];
+                    //convert to int to compare ranges
+                    int firstHourInt = int.Parse(firstHour);
+                    int firstMinuteInt = int.Parse(firstMinute);
+
+                    //grabbing the hours and minutes from the end time
+                    string[] endTimes = eachTime[1].Split(':');
+                    string endHour = endTimes[0];
+                    string endMinute = endTimes[1];
+                    //convert to int to compare ranges
+                    int endHourInt = int.Parse(endHour);
+                    int endMinuteInt = int.Parse(endMinute);
+
+                    //if it's between the start and end time, go to the open screen
+                    if ((currHour > firstHourInt) && (currHour < endHourInt))
+                    {
+                        //Debug.Log("OpenScreen....." + currHour + " " + firstHourInt + " " + currMinute + " " + firstMinuteInt);
+                        //Debug.Log("OpenScreen....." + currHour + " " + endHourInt + " " + currMinute + " " + endMinuteInt);
+                        //Debug.Log("Got here one");
+                        goodToGo++;
+                        break;
+                    }/*
+                    else if(currHour==endHourInt && currMinute<endMinuteInt) {
+                        goodToGo++;
+                        Debug.Log("Got here two");
+                        //break;
+                    }*/
+                    else if(currHour==firstHourInt && currMinute>=firstMinuteInt && 
+                        currHour==endHourInt && currMinute<endMinuteInt) {
+                        goodToGo++;
+                        //Debug.Log("in the same hour...");
+                        //Debug.Log("got here three");
+                        break;
+                    }
+                    else if(currHour==firstHourInt && currMinute>=firstMinuteInt &&
+                        currHour<endHourInt)
+                    {
+                        //Debug.Log("got here new addition");
+                        goodToGo++;
+                        break;
+                    }
+                    else if(currHour>=firstHourInt && currHour==endHourInt && currMinute<endMinuteInt)
+                    {
+                        //Debug.Log("got here...");
+                        goodToGo++;
+                        break;
+                    }
+                    /*
+                    else if (currHour > endHourInt)
+                    {
+                        //Debug.Log("Stopping now...");
+                        goodToGo = 0;
+                        //Debug.Log("got here four");
+                    } */
+                    else
+                    {
+                       //Debug.Log("got here five");
+                        goodToGo = 0;
+                        if (currHour < firstHourInt)
+                        {
+                            //Debug.Log("got here six");
+                            //goodToGo = 0;
+                            //if (currMinute < firstMinuteInt)
+                            //{
+                                //Debug.Log("got here seven");
+                                count++;
+                                if (count == 1)
+                                {
+                                    //Debug.Log("THE NEXT TIME IS..." + firstHourInt + ":" + firstMinuteInt);
+                                    textHour = firstHourInt;
+                                    textMin = firstMinuteInt;
+                                    NoPlaying();
+                                }
+                            //}
+                        }
+                        else if(currHour==firstHourInt)
+                        {
+                            if(currMinute<firstMinuteInt)
+                            {
+                                //Debug.Log("got here eight");
+                                count++;
+                                if (count == 1)
+                                {
+                                    //Debug.Log("THE NEXT TIME IS..." + firstHourInt + ":" + firstMinuteInt);
+                                    textHour = firstHourInt;
+                                    textMin = firstMinuteInt;
+                                    NoPlaying();
+                                }
+                            }
+                        }
+
+                    }
                 }
             }
         }
+    }
+
+    void NoPlaying()
+    {
+        SceneManager.LoadScene("No Playing Screen");
     }
 }

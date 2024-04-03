@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Slayer.unity
     guid: f96393b517a618b418ffd267b30932a8
   - enabled: 1
-    path: Assets/Scenes/GameTemplate.unity
-    guid: e7b3801f4f4b5f549aec1293b5e6e46e
+    path: Assets/Scenes/No Playing Screen.unity
+    guid: 475c98866004e47c59c842226c37d8ea
   m_configObjects: {}
