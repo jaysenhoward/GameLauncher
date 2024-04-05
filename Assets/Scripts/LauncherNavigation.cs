@@ -30,9 +30,6 @@ public class LauncherNavigation : MonoBehaviour
         sceneCount =SceneManager.sceneCountInBuildSettings;
     }
 
-   
-
-
     private void Up(InputAction.CallbackContext context)
     {
         //Show the next game in the launcher. If we are at the last game in the launcher return to Project Rock
@@ -43,7 +40,7 @@ public class LauncherNavigation : MonoBehaviour
         }
         else
         {
-            levelLoader.LoadNextLevel(SceneManager.GetActiveScene().buildIndex+1);
+            levelLoader.LoadNextLevel(SceneManager.GetActiveScene().buildIndex - 1);
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
@@ -53,12 +50,12 @@ public class LauncherNavigation : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-            levelLoader.LoadNextLevel(sceneCount-1);
+            levelLoader.LoadNextLevel(sceneCount - 1);
             //SceneManager.LoadScene(sceneCount-1);
         }
         else
         {
-            levelLoader.LoadNextLevel(SceneManager.GetActiveScene().buildIndex-1);
+            levelLoader.LoadNextLevel(SceneManager.GetActiveScene().buildIndex + 1);
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
     }
