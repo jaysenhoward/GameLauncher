@@ -53,7 +53,7 @@ public class LauncherNavigation : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-            levelLoader.LoadNextLevel(sceneCount-1);
+            levelLoader.LoadNextLevel(sceneCount-2);
             //SceneManager.LoadScene(sceneCount-1);
         }
         else

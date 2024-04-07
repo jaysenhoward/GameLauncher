@@ -37,7 +37,7 @@ public partial class @UI_Input: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Down"",
+                    ""name"": ""Play"",
                     ""type"": ""Button"",
                     ""id"": ""bbc49d57-fcf5-4cc8-8e21-19f5c19bc7ff"",
                     ""expectedControlType"": ""Button"",
@@ -46,7 +46,7 @@ public partial class @UI_Input: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Play"",
+                    ""name"": ""Down"",
                     ""type"": ""Button"",
                     ""id"": ""ed499a3e-718f-41bd-b7c9-0a3e94082371"",
                     ""expectedControlType"": ""Button"",
@@ -56,6 +56,50 @@ public partial class @UI_Input: IInputActionCollection2, IDisposable
                 }
             ],
             ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""607e551e-6348-42bb-8471-005f26286764"",
+                    ""path"": ""<HID::Microntek              USB Joystick          >/button3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""Play"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b8285103-f9bb-44b5-b2ba-9e893504298f"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Play"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d0dc9a28-5c42-4a99-88d7-593405b4b1ce"",
+                    ""path"": ""<HID::Microntek              USB Joystick          >/button4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""64c6c46c-23e0-46ae-bf25-aed5e34f70ac"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
                 {
                     ""name"": """",
                     ""id"": ""8b904764-d470-4575-8fda-b23c5752f94b"",
@@ -75,50 +119,6 @@ public partial class @UI_Input: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Up"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7203362a-9252-48c4-b6cc-8a4446ea80c5"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Gamepad"",
-                    ""action"": ""Down"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""607e551e-6348-42bb-8471-005f26286764"",
-                    ""path"": ""<HID::Microntek              USB Joystick          >/button3"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Joystick"",
-                    ""action"": ""Down"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""4bd4ee7f-82c8-4724-bcf0-8b047b3786aa"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Play"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""248a5c01-54a3-4c3c-b526-ed73b9f1f5f9"",
-                    ""path"": ""<Joystick>/trigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Joystick"",
-                    ""action"": ""Play"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -191,8 +191,8 @@ public partial class @UI_Input: IInputActionCollection2, IDisposable
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Up = m_UI.FindAction("Up", throwIfNotFound: true);
-        m_UI_Down = m_UI.FindAction("Down", throwIfNotFound: true);
         m_UI_Play = m_UI.FindAction("Play", throwIfNotFound: true);
+        m_UI_Down = m_UI.FindAction("Down", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -255,15 +255,15 @@ public partial class @UI_Input: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_UI;
     private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
     private readonly InputAction m_UI_Up;
-    private readonly InputAction m_UI_Down;
     private readonly InputAction m_UI_Play;
+    private readonly InputAction m_UI_Down;
     public struct UIActions
     {
         private @UI_Input m_Wrapper;
         public UIActions(@UI_Input wrapper) { m_Wrapper = wrapper; }
         public InputAction @Up => m_Wrapper.m_UI_Up;
-        public InputAction @Down => m_Wrapper.m_UI_Down;
         public InputAction @Play => m_Wrapper.m_UI_Play;
+        public InputAction @Down => m_Wrapper.m_UI_Down;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -276,12 +276,12 @@ public partial class @UI_Input: IInputActionCollection2, IDisposable
             @Up.started += instance.OnUp;
             @Up.performed += instance.OnUp;
             @Up.canceled += instance.OnUp;
-            @Down.started += instance.OnDown;
-            @Down.performed += instance.OnDown;
-            @Down.canceled += instance.OnDown;
             @Play.started += instance.OnPlay;
             @Play.performed += instance.OnPlay;
             @Play.canceled += instance.OnPlay;
+            @Down.started += instance.OnDown;
+            @Down.performed += instance.OnDown;
+            @Down.canceled += instance.OnDown;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -289,12 +289,12 @@ public partial class @UI_Input: IInputActionCollection2, IDisposable
             @Up.started -= instance.OnUp;
             @Up.performed -= instance.OnUp;
             @Up.canceled -= instance.OnUp;
-            @Down.started -= instance.OnDown;
-            @Down.performed -= instance.OnDown;
-            @Down.canceled -= instance.OnDown;
             @Play.started -= instance.OnPlay;
             @Play.performed -= instance.OnPlay;
             @Play.canceled -= instance.OnPlay;
+            @Down.started -= instance.OnDown;
+            @Down.performed -= instance.OnDown;
+            @Down.canceled -= instance.OnDown;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -360,7 +360,7 @@ public partial class @UI_Input: IInputActionCollection2, IDisposable
     public interface IUIActions
     {
         void OnUp(InputAction.CallbackContext context);
-        void OnDown(InputAction.CallbackContext context);
         void OnPlay(InputAction.CallbackContext context);
+        void OnDown(InputAction.CallbackContext context);
     }
 }

@@ -15,7 +15,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Down",
+                    "name": "Play",
                     "type": "Button",
                     "id": "bbc49d57-fcf5-4cc8-8e21-19f5c19bc7ff",
                     "expectedControlType": "Button",
@@ -24,7 +24,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Play",
+                    "name": "Down",
                     "type": "Button",
                     "id": "ed499a3e-718f-41bd-b7c9-0a3e94082371",
                     "expectedControlType": "Button",
@@ -34,6 +34,50 @@
                 }
             ],
             "bindings": [
+                {
+                    "name": "",
+                    "id": "607e551e-6348-42bb-8471-005f26286764",
+                    "path": "<HID::Microntek              USB Joystick          >/button3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick",
+                    "action": "Play",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b8285103-f9bb-44b5-b2ba-9e893504298f",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Play",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d0dc9a28-5c42-4a99-88d7-593405b4b1ce",
+                    "path": "<HID::Microntek              USB Joystick          >/button4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick",
+                    "action": "Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "64c6c46c-23e0-46ae-bf25-aed5e34f70ac",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
                 {
                     "name": "",
                     "id": "8b904764-d470-4575-8fda-b23c5752f94b",
@@ -53,50 +97,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Up",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7203362a-9252-48c4-b6cc-8a4446ea80c5",
-                    "path": "<Keyboard>/downArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Down",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "607e551e-6348-42bb-8471-005f26286764",
-                    "path": "<HID::Microntek              USB Joystick          >/button3",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Joystick",
-                    "action": "Down",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "4bd4ee7f-82c8-4724-bcf0-8b047b3786aa",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Play",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "248a5c01-54a3-4c3c-b526-ed73b9f1f5f9",
-                    "path": "<Joystick>/trigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Joystick",
-                    "action": "Play",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
