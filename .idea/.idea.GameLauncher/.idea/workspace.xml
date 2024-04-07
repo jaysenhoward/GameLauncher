@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="218551ff-d13b-4c29-862a-08d17123ec14" name="Changes" comment="" />
+    <list default="true" id="218551ff-d13b-4c29-862a-08d17123ec14" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameLauncher/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameLauncher/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Slayer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Slayer.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LauncherNavigation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LauncherNavigation.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +18,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLaunch.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameLaunch.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -113,6 +117,7 @@
       <workItem from="1711550859077" duration="413000" />
       <workItem from="1712164797525" duration="485000" />
       <workItem from="1712165391677" duration="695000" />
+      <workItem from="1712353520968" duration="1852000" />
     </task>
     <servers />
   </component>
