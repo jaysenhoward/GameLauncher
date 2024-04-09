@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="218551ff-d13b-4c29-862a-08d17123ec14" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameLauncher/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameLauncher/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Project Rock.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Project Rock.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VideoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/VideoController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +114,7 @@
       <workItem from="1712164797525" duration="485000" />
       <workItem from="1712165391677" duration="695000" />
       <workItem from="1712353520968" duration="1852000" />
-      <workItem from="1712684362252" duration="593000" />
+      <workItem from="1712684362252" duration="1237000" />
     </task>
     <servers />
   </component>
