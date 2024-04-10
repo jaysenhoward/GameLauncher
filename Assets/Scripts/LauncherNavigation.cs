@@ -35,16 +35,15 @@ public class LauncherNavigation : MonoBehaviour
 
     private void Up(InputAction.CallbackContext context)
     {
-        //Show the next game in the launcher. If we are at the last game in the launcher return to Project Rock
+        //Show the next game in the launcher. If we are at the last game in the launcher return to Project Rock (Default)
         if (SceneManager.GetActiveScene().buildIndex == sceneCount - 2)
         {
             levelLoader.LoadNextLevel(0);
-            //SceneManager.LoadScene(0);
         }
         else
         {
             levelLoader.LoadNextLevel(SceneManager.GetActiveScene().buildIndex+1);
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            
         }
 
     }
@@ -54,22 +53,20 @@ public class LauncherNavigation : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
             levelLoader.LoadNextLevel(sceneCount-2);
-            //SceneManager.LoadScene(sceneCount-1);
+            
         }
         else
         {
             levelLoader.LoadNextLevel(SceneManager.GetActiveScene().buildIndex-1);
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            
         }
     }
     private void Play(InputAction.CallbackContext context)
     {
         //Launch Game
-        //Process.Start(path);
-        //need file location
+        
         Process.Start(path);
         
-        //Application.Quit();
     }
 
     private void OnEnable()
