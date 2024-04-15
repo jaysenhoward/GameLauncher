@@ -117,7 +117,7 @@ public partial class @UI_Input: IInputActionCollection2, IDisposable
                     ""path"": ""<HID::Microntek              USB Joystick          >/button2"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Joystick"",
                     ""action"": ""Up"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
