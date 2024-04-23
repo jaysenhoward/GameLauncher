@@ -66,6 +66,7 @@ public class LauncherNavigation : MonoBehaviour
         //Launch Game
         
         Process.Start(path);
+        Application.Quit();
         
     }
 
