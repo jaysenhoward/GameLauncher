@@ -4,10 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using System;
+using TMPro;
 using UnityEngine.SceneManagement;
 
-public class TimeManager : MonoBehaviour
+public class TimeManagerNoPlay : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI _timeString;
+    
     int count;
     string currScene;
     int goodToGo = 0;
@@ -67,6 +70,7 @@ public class TimeManager : MonoBehaviour
                         //Debug.Log("OpenScreen....." + currHour + " " + firstHourInt + " " + currMinute + " " + firstMinuteInt);
                         //Debug.Log("OpenScreen....." + currHour + " " + endHourInt + " " + currMinute + " " + endMinuteInt);
                         //Debug.Log("Got here one");
+                        NoPlaying();
                         goodToGo++;
                         break;
                     }/*
@@ -80,18 +84,21 @@ public class TimeManager : MonoBehaviour
                         goodToGo++;
                         //Debug.Log("in the same hour...");
                         //Debug.Log("got here three");
+                        NoPlaying();
                         break;
                     }
                     else if(currHour==firstHourInt && currMinute>=firstMinuteInt &&
                         currHour<endHourInt)
                     {
                         //Debug.Log("got here new addition");
+                        NoPlaying();
                         goodToGo++;
                         break;
                     }
                     else if(currHour>=firstHourInt && currHour==endHourInt && currMinute<endMinuteInt)
                     {
                         //Debug.Log("got here...");
+                        NoPlaying();
                         goodToGo++;
                         break;
                     }
@@ -119,7 +126,7 @@ public class TimeManager : MonoBehaviour
                                     //Debug.Log("THE NEXT TIME IS..." + firstHourInt + ":" + firstMinuteInt);
                                     textHour = firstHourInt;
                                     textMin = firstMinuteInt;
-                                    NoPlaying();
+                                    
                                 }
                             //}
                         }
@@ -134,7 +141,6 @@ public class TimeManager : MonoBehaviour
                                     //Debug.Log("THE NEXT TIME IS..." + firstHourInt + ":" + firstMinuteInt);
                                     textHour = firstHourInt;
                                     textMin = firstMinuteInt;
-                                    NoPlaying();
                                 }
                             }
                         }
@@ -143,10 +149,12 @@ public class TimeManager : MonoBehaviour
                 }
             }
         }
+
+        _timeString.text = "Come Back At " + textHour + ":" + textMin + "!";
     }
 
     void NoPlaying()
     {
-        SceneManager.LoadScene("No Playing Screen");
+        SceneManager.LoadScene("Project Rock");
     }
 }
