@@ -2,13 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.Video;
-
+using Debug = UnityEngine.Debug;
 
 
 public class LauncherNavigation : MonoBehaviour
@@ -22,15 +24,39 @@ public class LauncherNavigation : MonoBehaviour
     public LevelLoader levelLoader;
     public UI_Input UIControls;
     public string path;
+    public Text nextLevel;
+    public Text previousLevel;
 
     void Awake()
     {
         //Set Input System
         UIControls = new UI_Input();
-        sceneCount =SceneManager.sceneCountInBuildSettings;
+        
+       
     }
 
-   
+    private void Start()
+    {
+        sceneCount = SceneManager.sceneCountInBuildSettings;
+        Debug.Log(sceneCount);
+        /*if (SceneManager.GetActiveScene().buildIndex == sceneCount - 2)
+        {
+            nextLevel.text = "To " + SceneManager.GetSceneAt(0).name;
+        }
+        else
+        {
+            nextLevel.text = "To " + (SceneManager.GetActiveScene().buildIndex + 1.ToString());//SceneManager.GetActiveScene().buildIndex+1).name;
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            previousLevel.text = "To " + SceneManager.GetSceneAt(sceneCount-2).name;
+        }
+        else
+        {
+            previousLevel.text = "To "+ (SceneManager.GetSceneAt(SceneManager.GetActiveScene().buildIndex-1).name);
+        }*/
+    }
 
 
     private void Up(InputAction.CallbackContext context)

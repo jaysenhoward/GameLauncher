@@ -23,7 +23,6 @@ public class VideoController : MonoBehaviour
     void Update()
     {
         currentTime = vidPlayer.time;
-        Debug.Log(currentTime);
         if (currentTime >= time-0.1f)
         {
             screen.SetActive(false);
