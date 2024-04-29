@@ -10,7 +10,10 @@ using UnityEngine.SceneManagement;
 public class TimeManagerNoPlay : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _timeString;
-    
+
+    private string amPm;
+    private string textMinString;
+    private string textHourString;
     int count;
     string currScene;
     int goodToGo = 0;
@@ -144,13 +147,27 @@ public class TimeManagerNoPlay : MonoBehaviour
                                 }
                             }
                         }
-
                     }
                 }
             }
         }
 
-        _timeString.text = "Come Back At " + textHour + ":" + textMin + "!";
+        if (textHour > 12)
+        {
+            textHourString = textHour - 12 + "";
+            amPm = "PM";
+        }
+        else
+        {
+            textHourString = textHour + "";
+            amPm = "AM";
+        }
+
+        if (textMin < 10)
+        {
+            textMinString = textMin + "0";
+        }
+        _timeString.text = "Come Back At " + textHourString + ":" + textMinString + " " + amPm + "!";
     }
 
     void NoPlaying()
