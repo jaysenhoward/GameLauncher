@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="218551ff-d13b-4c29-862a-08d17123ec14" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameLauncher/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameLauncher/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/No Playing Screen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/No Playing Screen.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/schedule.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/schedule.txt" afterDir="false" />
     </list>
@@ -123,7 +124,7 @@
       <workItem from="1714090107585" duration="2590000" />
       <workItem from="1714092778425" duration="3000" />
       <workItem from="1714412964230" duration="1101000" />
-      <workItem from="1714672194105" duration="13000" />
+      <workItem from="1714672194105" duration="298000" />
     </task>
     <servers />
   </component>
