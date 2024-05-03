@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
 public class VideoController : MonoBehaviour
@@ -35,7 +36,7 @@ public class VideoController : MonoBehaviour
     IEnumerator videoDelay()
     {
         yield return new WaitForSeconds(7f);
-        screen.SetActive(true);
+        if(SceneManager.GetActiveScene().name!="Slayer")screen.SetActive(true);
         vidPlayer.Play();
     }
 }
