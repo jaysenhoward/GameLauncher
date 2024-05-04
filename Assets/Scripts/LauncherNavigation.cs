@@ -24,15 +24,20 @@ public class LauncherNavigation : MonoBehaviour
     public LevelLoader levelLoader;
     public UI_Input UIControls;
     public string path;
+    public string tempPath;
     public Text nextLevel;
     public Text previousLevel;
+    public TextMeshProUGUI plays;
+
 
     void Awake()
     {
         //Set Input System
         UIControls = new UI_Input();
-        
-       
+        string temp = SceneManager.GetActiveScene().name;
+        plays.text = "Plays: " + PlayerPrefs.GetInt(temp);
+
+
     }
 
     private void Start()
@@ -90,8 +95,12 @@ public class LauncherNavigation : MonoBehaviour
     private void Play(InputAction.CallbackContext context)
     {
         //Launch Game
-        
-        Process.Start(path);
+        string gameName = SceneManager.GetActiveScene().name;
+        int temp = PlayerPrefs.GetInt(gameName);
+        PlayerPrefs.SetInt(gameName,temp+1 );
+        Process.Start(tempPath);
+        //Process.Start(path);
+        plays.text = "Plays: " + PlayerPrefs.GetInt(gameName);
         Application.Quit();
         
     }

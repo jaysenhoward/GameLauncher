@@ -13,7 +13,7 @@ public class VideoController : MonoBehaviour
     void Start()
     {
         time = vidPlayer.clip.length;
-        Debug.Log(time);
+//        Debug.Log(time);
     }
 
     void Awake()
@@ -27,7 +27,7 @@ public class VideoController : MonoBehaviour
         if (currentTime >= time-0.1f)
         {
             screen.SetActive(false);
-            Debug.Log("End Vid");
+           // Debug.Log("End Vid");
             StartCoroutine(videoDelay());
 
         }
