@@ -167,7 +167,7 @@ public class TimeManagerNoPlay : MonoBehaviour
         {
             textMinString = textMin + "0";
         }
-        _timeString.text = "Come Back At " + textHourString + ":" + textMinString + " " + amPm + "!";
+        _timeString.text = "Come Back At " + textHourString + ":" + textMinString + " " + amPm + "to play!";
     }
 
     void NoPlaying()

@@ -782,7 +782,7 @@ MonoBehaviour:
   levelLoader: {fileID: 474107600}
   path: '"/Users/2290-avpb/Desktop/ProjectRock.app"'
   nextLevel: {fileID: 577110983}
-  previousLevel: {fileID: 0}
+  previousLevel: {fileID: 331343549}
 --- !u!1 &819907423
 GameObject:
   m_ObjectHideFlags: 0
