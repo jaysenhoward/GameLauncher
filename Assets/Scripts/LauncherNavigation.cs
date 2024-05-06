@@ -98,8 +98,8 @@ public class LauncherNavigation : MonoBehaviour
         string gameName = SceneManager.GetActiveScene().name;
         int temp = PlayerPrefs.GetInt(gameName);
         PlayerPrefs.SetInt(gameName,temp+1 );
-        Process.Start(tempPath);
-        //Process.Start(path);
+        //Process.Start(tempPath);
+        Process.Start(path);
         plays.text = "Plays: " + PlayerPrefs.GetInt(gameName);
         Application.Quit();
         
