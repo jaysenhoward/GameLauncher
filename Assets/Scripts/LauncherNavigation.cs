@@ -40,8 +40,15 @@ public class LauncherNavigation : MonoBehaviour
     {
         //Set Input System
         UIControls = new UI_Input();
-        string temp = SceneManager.GetActiveScene().name;
-        plays.text = "Plays: " + PlayerPrefs.GetInt(temp);
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+        {
+            string gameName = SceneManager.GetActiveScene().name;
+            plays.text = "Plays: " + PlayerPrefs.GetInt(gameName);
+        }
+        else
+        {
+            plays.text = "Plays: " +  PlayerPrefs.GetInt("timesPlayed");
+        }
         sceneNumber= SceneManager.sceneCountInBuildSettings;
         scenes= new string[sceneNumber];
         for (int i = 0; i < sceneNumber; i++)
