@@ -106,12 +106,21 @@ public class LauncherNavigation : MonoBehaviour
     private void Play(InputAction.CallbackContext context)
     {
         //Launch Game
-        string gameName = SceneManager.GetActiveScene().name;
-        int temp = PlayerPrefs.GetInt(gameName);
-        PlayerPrefs.SetInt(gameName,temp+1 );
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+        {
+            string gameName = SceneManager.GetActiveScene().name;
+            int temp = PlayerPrefs.GetInt(gameName);
+            PlayerPrefs.SetInt(gameName,temp+1 );
+            plays.text = "Plays: " + PlayerPrefs.GetInt(gameName);
+        }
+        else
+        {
+            plays.text = "Plays: " +  PlayerPrefs.GetInt("timesPlayed");
+        }
+        
         //Process.Start(tempPath);
         Process.Start(path);
-        plays.text = "Plays: " + PlayerPrefs.GetInt(gameName);
+        
         Application.Quit();
         
     }

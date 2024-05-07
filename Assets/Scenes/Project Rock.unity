@@ -1601,12 +1601,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5879882273871712226, guid: 8ab5cfac221b03c46bfd01dd0767ad27, type: 3}
       propertyPath: m_Volume
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5879882273871712226, guid: 8ab5cfac221b03c46bfd01dd0767ad27, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 8ff44a53610f38642a9a0dbcfaff8334, type: 3}
+    - target: {fileID: 6410007863582618748, guid: 8ab5cfac221b03c46bfd01dd0767ad27, type: 3}
+      propertyPath: sceneNames.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410007863582618748, guid: 8ab5cfac221b03c46bfd01dd0767ad27, type: 3}
+      propertyPath: sceneNames.Array.data[2]
+      value: Slayer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
