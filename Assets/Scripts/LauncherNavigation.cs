@@ -2,8 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
+using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Networking;
@@ -29,6 +32,9 @@ public class LauncherNavigation : MonoBehaviour
     public Text previousLevel;
     public TextMeshProUGUI plays;
 
+    private int sceneNumber;
+    private string[] scenes;
+
 
     void Awake()
     {
@@ -36,7 +42,12 @@ public class LauncherNavigation : MonoBehaviour
         UIControls = new UI_Input();
         string temp = SceneManager.GetActiveScene().name;
         plays.text = "Plays: " + PlayerPrefs.GetInt(temp);
-
+        sceneNumber= SceneManager.sceneCountInBuildSettings;
+        scenes= new string[sceneNumber];
+        for (int i = 0; i < sceneNumber; i++)
+        {
+            scenes[i] = Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(i));
+        }
 
     }
 
@@ -44,23 +55,23 @@ public class LauncherNavigation : MonoBehaviour
     {
         sceneCount = SceneManager.sceneCountInBuildSettings;
         Debug.Log(sceneCount);
-        /*if (SceneManager.GetActiveScene().buildIndex == sceneCount - 2)
+        if (SceneManager.GetActiveScene().name == scenes[scenes.Length-2])
         {
-            nextLevel.text = "To " + SceneManager.GetSceneAt(0).name;
+            nextLevel.text = "To " + scenes[0];
         }
         else
         {
-            nextLevel.text = "To " + (SceneManager.GetActiveScene().buildIndex + 1.ToString());//SceneManager.GetActiveScene().buildIndex+1).name;
+            nextLevel.text = "To " + scenes[SceneManager.GetActiveScene().buildIndex + 1];//SceneManager.GetActiveScene().buildIndex+1).name;
         }
 
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-            previousLevel.text = "To " + SceneManager.GetSceneAt(sceneCount-2).name;
+            previousLevel.text = "To " + scenes[scenes.Length-2];
         }
         else
         {
-            previousLevel.text = "To "+ (SceneManager.GetSceneAt(SceneManager.GetActiveScene().buildIndex-1).name);
-        }*/
+            previousLevel.text = "To "+ scenes[SceneManager.GetActiveScene().buildIndex - 1];
+        }
     }
 
 
