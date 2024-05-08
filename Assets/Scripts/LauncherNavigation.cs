@@ -40,15 +40,11 @@ public class LauncherNavigation : MonoBehaviour
     {
         //Set Input System
         UIControls = new UI_Input();
-        if (SceneManager.GetActiveScene().buildIndex != 0)
-        {
+       
             string gameName = SceneManager.GetActiveScene().name;
             plays.text = "Plays: " + PlayerPrefs.GetInt(gameName);
-        }
-        else
-        {
-            plays.text = "Plays: " +  PlayerPrefs.GetInt("timesPlayed");
-        }
+        
+    
         sceneNumber= SceneManager.sceneCountInBuildSettings;
         scenes= new string[sceneNumber];
         for (int i = 0; i < sceneNumber; i++)
@@ -113,17 +109,12 @@ public class LauncherNavigation : MonoBehaviour
     private void Play(InputAction.CallbackContext context)
     {
         //Launch Game
-        if (SceneManager.GetActiveScene().buildIndex != 0)
-        {
+       
             string gameName = SceneManager.GetActiveScene().name;
             int temp = PlayerPrefs.GetInt(gameName);
             PlayerPrefs.SetInt(gameName,temp+1 );
             plays.text = "Plays: " + PlayerPrefs.GetInt(gameName);
-        }
-        else
-        {
-            plays.text = "Plays: " +  PlayerPrefs.GetInt("timesPlayed");
-        }
+      
         
         //Process.Start(tempPath);
         Process.Start(path);
