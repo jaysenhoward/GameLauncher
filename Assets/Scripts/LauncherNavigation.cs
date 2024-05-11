@@ -27,7 +27,6 @@ public class LauncherNavigation : MonoBehaviour
     public LevelLoader levelLoader;
     public UI_Input UIControls;
     public string path;
-    public string tempPath;
     public Text nextLevel;
     public Text previousLevel;
     public TextMeshProUGUI plays;
