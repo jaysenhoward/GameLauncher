@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="218551ff-d13b-4c29-862a-08d17123ec14" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameLauncher/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameLauncher/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameTemplate.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameTemplate.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameTemplate.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameTemplate.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LauncherNavigation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LauncherNavigation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input/UI_Input.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/UI_Input.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input/UI_Input.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/UI_Input.inputactions" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +148,8 @@
       <workItem from="1715110104545" duration="1013000" />
       <workItem from="1715114609186" duration="1258000" />
       <workItem from="1715191192007" duration="1173000" />
-      <workItem from="1715439706822" duration="619000" />
+      <workItem from="1715439706822" duration="621000" />
+      <workItem from="1715616374680" duration="1024000" />
     </task>
     <servers />
   </component>

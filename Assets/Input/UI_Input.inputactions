@@ -36,17 +36,6 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "607e551e-6348-42bb-8471-005f26286764",
-                    "path": "<HID::Microntek              USB Joystick          >/button3",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Joystick",
-                    "action": "Play",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "b8285103-f9bb-44b5-b2ba-9e893504298f",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -97,6 +86,94 @@
                     "processors": "",
                     "groups": "Joystick",
                     "action": "Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "4ButtonMapping",
+            "id": "142a0e7c-2b9a-49b3-971c-c2086e3362e1",
+            "actions": [
+                {
+                    "name": "Green",
+                    "type": "Button",
+                    "id": "db8de83c-625b-4891-ac8d-80f3852641c9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Blue",
+                    "type": "Button",
+                    "id": "64dd2835-48f7-4de3-8159-4ddf0d9bb3b5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Red",
+                    "type": "Button",
+                    "id": "a3754f8e-e6f1-40a1-923e-55d24732d6d3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Yellow",
+                    "type": "Button",
+                    "id": "0ce03e26-d364-48b9-88ab-bbed4d161f3c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c769f96a-1637-4b7d-ac60-300479dab25c",
+                    "path": "<HID::Microntek              USB Joystick          >/button4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick",
+                    "action": "Green",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "daa8f0dd-d6e2-4f37-adf1-f77157d84117",
+                    "path": "<HID::Microntek              USB Joystick          >/button3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick",
+                    "action": "Blue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "767da215-0e13-46da-b09e-43d953d8eaf7",
+                    "path": "<HID::Microntek              USB Joystick          >/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick",
+                    "action": "Yellow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d2e91894-9e3a-4810-a4a0-3dd3ecf42e98",
+                    "path": "<Joystick>/trigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Joystick",
+                    "action": "Red",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -785,7 +785,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelLoader: {fileID: 1756918263}
   path: '"/Users/2290-avpb/Desktop/SlayerGame.app"'
-  tempPath: '"C:\WindowsBuilds\Slayer.exe"'
   nextLevel: {fileID: 577110983}
   previousLevel: {fileID: 1988094045}
   plays: {fileID: 66771929}

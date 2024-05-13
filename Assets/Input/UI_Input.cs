@@ -58,17 +58,6 @@ public partial class @UI_Input: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""607e551e-6348-42bb-8471-005f26286764"",
-                    ""path"": ""<HID::Microntek              USB Joystick          >/button3"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Joystick"",
-                    ""action"": ""Play"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""b8285103-f9bb-44b5-b2ba-9e893504298f"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
@@ -119,6 +108,94 @@ public partial class @UI_Input: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Joystick"",
                     ""action"": ""Up"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""4ButtonMapping"",
+            ""id"": ""142a0e7c-2b9a-49b3-971c-c2086e3362e1"",
+            ""actions"": [
+                {
+                    ""name"": ""Green"",
+                    ""type"": ""Button"",
+                    ""id"": ""db8de83c-625b-4891-ac8d-80f3852641c9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Blue"",
+                    ""type"": ""Button"",
+                    ""id"": ""64dd2835-48f7-4de3-8159-4ddf0d9bb3b5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Red"",
+                    ""type"": ""Button"",
+                    ""id"": ""a3754f8e-e6f1-40a1-923e-55d24732d6d3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Yellow"",
+                    ""type"": ""Button"",
+                    ""id"": ""0ce03e26-d364-48b9-88ab-bbed4d161f3c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""c769f96a-1637-4b7d-ac60-300479dab25c"",
+                    ""path"": ""<HID::Microntek              USB Joystick          >/button4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""Green"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""daa8f0dd-d6e2-4f37-adf1-f77157d84117"",
+                    ""path"": ""<HID::Microntek              USB Joystick          >/button3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""Blue"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""767da215-0e13-46da-b09e-43d953d8eaf7"",
+                    ""path"": ""<HID::Microntek              USB Joystick          >/button2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""Yellow"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d2e91894-9e3a-4810-a4a0-3dd3ecf42e98"",
+                    ""path"": ""<Joystick>/trigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""Red"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -193,6 +270,12 @@ public partial class @UI_Input: IInputActionCollection2, IDisposable
         m_UI_Up = m_UI.FindAction("Up", throwIfNotFound: true);
         m_UI_Play = m_UI.FindAction("Play", throwIfNotFound: true);
         m_UI_Down = m_UI.FindAction("Down", throwIfNotFound: true);
+        // 4ButtonMapping
+        m__4ButtonMapping = asset.FindActionMap("4ButtonMapping", throwIfNotFound: true);
+        m__4ButtonMapping_Green = m__4ButtonMapping.FindAction("Green", throwIfNotFound: true);
+        m__4ButtonMapping_Blue = m__4ButtonMapping.FindAction("Blue", throwIfNotFound: true);
+        m__4ButtonMapping_Red = m__4ButtonMapping.FindAction("Red", throwIfNotFound: true);
+        m__4ButtonMapping_Yellow = m__4ButtonMapping.FindAction("Yellow", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -312,6 +395,76 @@ public partial class @UI_Input: IInputActionCollection2, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
+
+    // 4ButtonMapping
+    private readonly InputActionMap m__4ButtonMapping;
+    private List<I_4ButtonMappingActions> m__4ButtonMappingActionsCallbackInterfaces = new List<I_4ButtonMappingActions>();
+    private readonly InputAction m__4ButtonMapping_Green;
+    private readonly InputAction m__4ButtonMapping_Blue;
+    private readonly InputAction m__4ButtonMapping_Red;
+    private readonly InputAction m__4ButtonMapping_Yellow;
+    public struct _4ButtonMappingActions
+    {
+        private @UI_Input m_Wrapper;
+        public _4ButtonMappingActions(@UI_Input wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Green => m_Wrapper.m__4ButtonMapping_Green;
+        public InputAction @Blue => m_Wrapper.m__4ButtonMapping_Blue;
+        public InputAction @Red => m_Wrapper.m__4ButtonMapping_Red;
+        public InputAction @Yellow => m_Wrapper.m__4ButtonMapping_Yellow;
+        public InputActionMap Get() { return m_Wrapper.m__4ButtonMapping; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(_4ButtonMappingActions set) { return set.Get(); }
+        public void AddCallbacks(I_4ButtonMappingActions instance)
+        {
+            if (instance == null || m_Wrapper.m__4ButtonMappingActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m__4ButtonMappingActionsCallbackInterfaces.Add(instance);
+            @Green.started += instance.OnGreen;
+            @Green.performed += instance.OnGreen;
+            @Green.canceled += instance.OnGreen;
+            @Blue.started += instance.OnBlue;
+            @Blue.performed += instance.OnBlue;
+            @Blue.canceled += instance.OnBlue;
+            @Red.started += instance.OnRed;
+            @Red.performed += instance.OnRed;
+            @Red.canceled += instance.OnRed;
+            @Yellow.started += instance.OnYellow;
+            @Yellow.performed += instance.OnYellow;
+            @Yellow.canceled += instance.OnYellow;
+        }
+
+        private void UnregisterCallbacks(I_4ButtonMappingActions instance)
+        {
+            @Green.started -= instance.OnGreen;
+            @Green.performed -= instance.OnGreen;
+            @Green.canceled -= instance.OnGreen;
+            @Blue.started -= instance.OnBlue;
+            @Blue.performed -= instance.OnBlue;
+            @Blue.canceled -= instance.OnBlue;
+            @Red.started -= instance.OnRed;
+            @Red.performed -= instance.OnRed;
+            @Red.canceled -= instance.OnRed;
+            @Yellow.started -= instance.OnYellow;
+            @Yellow.performed -= instance.OnYellow;
+            @Yellow.canceled -= instance.OnYellow;
+        }
+
+        public void RemoveCallbacks(I_4ButtonMappingActions instance)
+        {
+            if (m_Wrapper.m__4ButtonMappingActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(I_4ButtonMappingActions instance)
+        {
+            foreach (var item in m_Wrapper.m__4ButtonMappingActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m__4ButtonMappingActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public _4ButtonMappingActions @_4ButtonMapping => new _4ButtonMappingActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -362,5 +515,12 @@ public partial class @UI_Input: IInputActionCollection2, IDisposable
         void OnUp(InputAction.CallbackContext context);
         void OnPlay(InputAction.CallbackContext context);
         void OnDown(InputAction.CallbackContext context);
+    }
+    public interface I_4ButtonMappingActions
+    {
+        void OnGreen(InputAction.CallbackContext context);
+        void OnBlue(InputAction.CallbackContext context);
+        void OnRed(InputAction.CallbackContext context);
+        void OnYellow(InputAction.CallbackContext context);
     }
 }
